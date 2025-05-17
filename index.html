@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WALLET</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="center">
+            <div class="addition">
+                <h3 class="zag">
+                    Товар:
+                </h3>
+                <input type="text" id="tovar" placeholder="Название..">
+                <h3 class="zag">
+                    Цена:
+                </h3>
+                <input type="text" id="tovar" placeholder="Цена..">
+                <h3 class="zag">
+                    Категория:
+                </h3>
+                <select name="category" id="category">
+                    <option value="none">Выберите категорию</option>
+                    <option value="products">Продукты</option>
+                    <option value="Fast food">ФастФуд</option>
+                    <option value="sport">Спорт</option>
+                    <option value="Games">Игры</option>
+                </select>
+
+                <button type="button" id="myBtn">Добавить</button>
+                <ul id="list"></ul>
+            </div>
+            <div class="transactions">
+                <div class="transactions_top">
+                    <ul class="transactions_top_list">
+                        <li class="transactions_top_item">Наименование</li>
+                        <li class="transactions_top_item">Категория</li>
+                        <li class="transactions_top_item">Цена</li>
+                        <li class="transactions_top_item"></li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
