@@ -11,6 +11,27 @@
 <body>
     <div class="wrapper">
         <div class="center">
+            <div class="info">
+                <h2 class="info_title">Информация о кошельке</h2>
+                <div class="info_flex">
+                    <div class="balanse">
+                        <div class="info_text">Баланс:</div>
+                        <div class="info_balanse" id="infoBalanse">0</div>
+                    </div>
+
+                    <div class="info_spent">
+                        <div class="info_add_text">Затраченно:</div>
+                        <div class="total">0</div>
+                    </div>
+                    <div class="info_add">
+                        <div class="info_add_text">Пополнить:</div>
+                        <input type="text" class="info_add_input" id="addMoney" placeholder="Введите сумму">
+                        <button type="button" id="myBtnInfo">Добавить</button>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="info_title">Список покупок</h2>
             <div class="addition">
                 <h3 class="zag">
                     Товар:
@@ -19,12 +40,12 @@
                 <h3 class="zag">
                     Цена:
                 </h3>
-                <input type="text" id="price" placeholder="Цена..">
+                <input type="number" id="price" placeholder="Цена..">
                 <h3 class="zag">
                     Категория:
                 </h3>
                 <select name="category" id="category">
-                    <option value="">Выберите категорию</option>
+                    <option value="">Выберите</option>
                     <option value="products">Продукты</option>
                     <option value="Fast food">ФастФуд</option>
                     <option value="sport">Спорт</option>
@@ -32,28 +53,28 @@
                 </select>
 
                 <button type="button" id="myBtn">Добавить</button>
-                <ul id="list"></ul>
+
             </div>
             <div class="transactions">
                 <div class="transactions_center">
-                <div class="transactions_top">
-                    <ul class="transactions_top_list">
-                        <li class="transactions_top_item">Наименование</li>
-                        <li class="transactions_top_item">Цена</li>
-                        <li class="transactions_top_item">Категория</li>
-                        <li class="transactions_top_item">✕</li>
-                    </ul>
-                </div>
-                <div class="transactions_onlist">
+                    <div class="transactions_top">
+                        <ul class="transactions_top_list">
+                            <li class="transactions_top_item">Товар</li>
+                            <li class="transactions_top_item">Цена</li>
+                            <li class="transactions_top_item">Категория</li>
+                            <li class="transactions_top_item">✕</li>
+                        </ul>
+                    </div>
+                    <div class="transactions_onlist">
 
+                    </div>
+                    <div class="divv">
+                        <h2>Подтвердите удаление</h2>
+                        <div class="sub">Вы уверены, что хотите удалить эти планы?</div>
+                        <button class="btnNo">Отмена</button>
+                        <button class="btnDell">удалить</button>
+                    </div>
                 </div>
-                <div class="divv">
-                    <h2>Подтвердите удаление</h2>
-                    <div class="sub">Вы уверены, что хотите удалить эти планы?</div>
-                    <button class="btnNo">Отмена</button>
-                    <button class="btnDell">удалить</button>
-                </div>
-            </div>
             </div>
 
 
