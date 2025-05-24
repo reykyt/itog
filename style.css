@@ -25,26 +25,159 @@ body {
 
 .addition {
     display: flex;
+    column-gap: 27px;
+justify-content: center;
+align-items: center;
+margin-bottom: 100px;
+
 }
+.transactions_top_list{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+ 
 
-
+    width: 1500px;
+}
+.zag{
+    font-size: 35px;
+    color: rgb(226, 226, 221);
+}
 li,
 ul {
     list-style: none;
 }
 
 #tovar,
-#tovar,
+#price,
 #category {
     border-radius: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
     border: none;
     padding: 5px;
+    max-width: 200px;
+    max-height: 60px;
+    padding: 20px;
 }
 
 #myBtn {
     border-radius: 10px;
-    margin-left: 10px;
+    max-height: 60px;
+    padding: 20px;
     border: none;
+    max-width: 150px;
+}
+.transactions_top_item{
+    font-size: 35px;
+    color: rgb(226, 226, 221);
+}
+.transactions_top{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+
+.del {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.divv {
+    opacity: 0;
+    display: none;
+
+    background-color: white;
+    max-width: 600px;
+    height: 300px;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 15px;
+
+}
+
+h2 {
+    font-size: 50px;
+}
+
+.btnNo {
+    color: white;
+    background-color: gray;
+    padding: 15px;
+    font-size: 30px;
+    margin-right: 60px;
+}
+
+.btnDell {
+    color: white;
+    background-color: rgb(218, 129, 129);
+    padding: 15px;
+    font-size: 30px;
+}
+
+.sub {
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.divvv {
+    position: fixed;
+    display: block;
+    top: 30%;
+    left: 40%;
+    opacity: 1;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    font-weight: 700;
+    column-gap: 20px;
+    width: 700px;
+    height: 60px;
+    background-color: white;
+    max-width: 1000px;
+    border-radius: 15px;
+    text-align: center;
+    align-items: center;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+
+
+input {
+    height: 30px;
+    width: 200px;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    font-size: 20px;
+    border-radius: 15px;
+}
+.transactions_item{
+font-size: 30px;
+color: rgb(226, 226, 221);
+text-align: center;
+}
+.transactions_list{
+    display: flex;
+align-items: center;
+justify-content: space-between;
+
+}
+
+.transactions_center{
+    background-color: rgba(27, 27, 27, 0.767);
+    margin: 0 auto;
+    max-width: 1500px;
+    padding: 20px;
+    padding-right: 40px;
 }

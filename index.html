@@ -19,12 +19,12 @@
                 <h3 class="zag">
                     Цена:
                 </h3>
-                <input type="text" id="tovar" placeholder="Цена..">
+                <input type="text" id="price" placeholder="Цена..">
                 <h3 class="zag">
                     Категория:
                 </h3>
                 <select name="category" id="category">
-                    <option value="none">Выберите категорию</option>
+                    <option value="">Выберите категорию</option>
                     <option value="products">Продукты</option>
                     <option value="Fast food">ФастФуд</option>
                     <option value="sport">Спорт</option>
@@ -35,14 +35,25 @@
                 <ul id="list"></ul>
             </div>
             <div class="transactions">
+                <div class="transactions_center">
                 <div class="transactions_top">
                     <ul class="transactions_top_list">
                         <li class="transactions_top_item">Наименование</li>
-                        <li class="transactions_top_item">Категория</li>
                         <li class="transactions_top_item">Цена</li>
-                        <li class="transactions_top_item"></li>
+                        <li class="transactions_top_item">Категория</li>
+                        <li class="transactions_top_item">✕</li>
                     </ul>
                 </div>
+                <div class="transactions_onlist">
+
+                </div>
+                <div class="divv">
+                    <h2>Подтвердите удаление</h2>
+                    <div class="sub">Вы уверены, что хотите удалить эти планы?</div>
+                    <button class="btnNo">Отмена</button>
+                    <button class="btnDell">удалить</button>
+                </div>
+            </div>
             </div>
 
 
