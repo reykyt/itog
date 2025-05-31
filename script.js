@@ -15,14 +15,15 @@ let addMoney = document.querySelector("#addMoney");
 let infoBalanse = document.querySelector("#infoBalanse");
 let infoTotal = 0
 
-let total = document.querySelector(".total")
-let total2 = 0
+let totalElement = document.querySelector(".total")
+let total = 0
 
 
 myBtnInfo.addEventListener('click', () => {
     if (addMoney.value != "") {
         infoTotal = infoTotal + +addMoney.value
         infoBalanse.textContent = infoTotal
+
     }
     else {
         alert("заполните поле пополнения!")
@@ -35,73 +36,77 @@ myBtn.addEventListener('click', () => {
 
 
         //создание массива 
-        let object = ["", "", ""];
+        let object = {};
         //присвоени значений
-        object[0] = tovarInput.value;
-        object[1] = priceInput.value;
-        object[2] = categoryInput.value;
+        object.tovar = tovarInput.value;
+        object.price = priceInput.value;
+        object.category = categoryInput.value;
+
+        console.log(object);
         //создание в dom дереве
-        let newList = document.createElement('ul');
-        let newItem = document.createElement('li');
-        let newItem2 = document.createElement('li');
-        let newItem3 = document.createElement('li');
+        let Expenses = document.createElement('ul');
+        let nameExpenses = document.createElement('li');
+        let priceExpenses = document.createElement('li');
+        let categoryExpenses = document.createElement('li');
         //добавление текста
-        newItem.textContent = object[0]
-        newItem2.textContent = object[1]
-        newItem3.textContent = object[2]
+        nameExpenses.textContent = object.tovar
+        priceExpenses.textContent = object.price
+        categoryExpenses.textContent = object.category
         //инициализация табла на сайт
-        transactions_onlist.appendChild(newList);
-        newList.appendChild(newItem);
-        newList.appendChild(newItem2);
-        newList.appendChild(newItem3);
+        transactions_onlist.appendChild(Expenses);
+        Expenses.appendChild(nameExpenses);
+        Expenses.appendChild(priceExpenses);
+        Expenses.appendChild(categoryExpenses);
         //очищение полей
         priceInput.value = "";
         categoryInput.value = "";
         tovarInput.value = "";
         let deleteButton = document.createElement("button");
-        newList.classList.add("transactions_list")
-        newItem.classList.add("transactions_item")
-        newItem2.classList.add("transactions_item")
-        newItem3.classList.add("transactions_item")
-        newItem2.classList.add("transactions_price")
+        Expenses.classList.add("transactions_list")
+        nameExpenses.classList.add("transactions_item")
+        priceExpenses.classList.add("transactions_item", "transactions_price")
+        categoryExpenses.classList.add("transactions_item")
         //добавление текста к кнопке
         deleteButton.textContent = "✕";
         deleteButton.classList.add("del")
         deleteButton.classList.add("deletes")
         //добавть в эл списка
-        newList.appendChild(deleteButton);
+        Expenses.appendChild(deleteButton);
 
 
 
 
-        const divv = document.querySelector(".divv");
+        const modal = document.querySelector(".modal");
         const btnNo = document.querySelector(".btnNo");
         const btnDell = document.querySelector(".btnDell");
-        total2 = total2 + +newItem2.textContent
-        total.textContent = total2
-        infoTotal = infoTotal - total2
+        total = total + +priceExpenses.textContent
+        totalElement.textContent = total
+        infoTotal = infoTotal - +priceExpenses.textContent
         infoBalanse.textContent = infoTotal
 
-        deleteButton.addEventListener("click", () => {
-            // list.removeChild(newItem);
-            divv.classList.add("divvv")
+        deleteButton.addEventListener("click", (del) => {
+            modal.classList.add("active")
             btnDell.addEventListener("click", deleteee)
             function deleteee() {
-                let damma = +newList.querySelector(".transactions_price").textContent
-                total2 = total2 - damma
-                total.textContent = total2
-                infoTotal = infoTotal + +damma
+                let price = +Expenses.querySelector(".transactions_price").textContent
+                console.log(price);
+
+                total = +total - price
+                totalElement.textContent = total
+
+                infoTotal = infoTotal + +price
+
                 infoBalanse.textContent = infoTotal
-                transactions_onlist.removeChild(newList);
-                divv.classList.remove("divvv")
+                transactions_onlist.removeChild(Expenses);
 
-                deleteButton.classList.add("btndelllle")
+                modal.classList.remove("active")
 
+                price = 0
             }
 
             btnNo.addEventListener("click", () => {
                 // list.removeChild(newItem);
-                divv.classList.remove("divvv")
+                modal.classList.remove("active")
                 btnDell.removeEventListener("click", deleteee)
 
             })

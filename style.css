@@ -90,7 +90,7 @@ ul {
     font-weight: 600;
 }
 
-.divv {
+.modal {
     opacity: 0;
     display: none;
 
@@ -128,7 +128,7 @@ h2 {
     margin-bottom: 50px;
 }
 
-.divvv {
+.modal.active {
     position: fixed;
     display: block;
     top: 30%;
@@ -260,4 +260,16 @@ input[type="number"]::-webkit-outer-spin-button {
     font-size: 40px;
     color: white;
     font-weight: 600;
+}
+
+.info_add {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.div_flex {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
 }
